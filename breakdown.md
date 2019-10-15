@@ -2,7 +2,8 @@
 ## Wat wordt waarvoor gebruikt?
 
 ### NodeJS
-Hiermee kun je een server laten draaien.
+Softwareplatform waarmee je een server kunt laten draaien.
+Hierdoor kun je JavaScript (wat oorspronkelijk voor de clientside was) aan de serverkant gebruiken.
 
 ### npm
 Gebruik van packages; grote verzamelplaats voor packages en met npm kun je met ze interacten.
