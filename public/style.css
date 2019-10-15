@@ -1,0 +1,78 @@
+/* BASE */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #98AFC7;
+  font-family: sans-serif;
+  display: flex;
+  align-content: center;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  align-content: center;
+}
+
+header{
+}
+
+main {
+
+}
+
+section {
+
+}
+
+article {
+}
+
+span {
+}
+
+blockquote {
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+
+h3 {
+
+}
+
+p {
+
+}
+
+img {
+
+}
+
+svg{
+
+}
+
+button{
+
+}
+/* LAYOUT */
+
+
+/* MODULES */
+
+
+/* STATE */
+
+
+/* THEME */
