@@ -27,7 +27,10 @@ Chill te combineren met atomic design; laat je app bijv bestaan uit atomen, die 
 ### How do we use it?
 Dmv een .vue extension --> basically gebruik je vue om gewoon de losse componenten te kunnen importen.
 
-Link je vue-script vlak voor </body>.
+1. Link je vue-script vlak voor </body>.
+2. Voeg de vue-componenten toe aan je body
+3. 
+
 
 
 ### Mini example
