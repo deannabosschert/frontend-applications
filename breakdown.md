@@ -2,7 +2,7 @@
 ## Wat wordt waarvoor gebruikt?
 
 ### NodeJS
-Draaien van een server
+Hiermee kun je een server laten draaien.
 
 ### npm
 Gebruik van packages; grote verzamelplaats voor packages en met npm kun je met ze interacten.
@@ -18,3 +18,9 @@ Middleware; zit tussen je handler en incoming request bodies en zorgt ervoor dat
 
 #### multer
 Middleware zodat je incoming requests bij in de vorm van een form die een fileupload bevat (multipart/form-data kunt handlen); deze package voegt een body-object en een file-object aan de request toe. Body-object bevat de waarden van de text fields van het formulier, de file bevat de uploaded file.
+
+#### Vue.js
+Hierdoor kun je code opdelen in componenten/losse files waardoor de verschillende onderdelen van je webpagina onafhankelijk van elkaar kunnen opereren.
+
+#### Nodemon
+Hiermee kun je je server automatisch laten reloaden wanneer je wijzigingen in je code aanbrengt.
