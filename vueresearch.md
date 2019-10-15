@@ -3,7 +3,7 @@
 
 ### What is VUE?
 Progressief framework om user interfaces mee te bouwen.
-Kern bestaat uit de focus op de view-layer en vue is makkelijk om te combineren met andere libraries of projecten.
+Kern bestaat uit de focus op de view-layer en vue is makkelijk om te combineren met andere libraries of projecten. Manier van code kunnen schrijven in aparte bestanden en vue zorgt ervoor dat ze weer correct bij elkaar komen.
 
 Het is makkelijk te onderhouden aangezien alles in delen is 'opgeknipt' en je dus snel aanpassingen kunt maken zonder dat je direct andere onderdelen van je app beïnvloedt. Dit zijn componenten.
 
@@ -29,7 +29,7 @@ Dmv een .vue extension --> basically gebruik je vue om gewoon de losse component
 
 1. Link je vue-script vlak voor </body>.
 2. Voeg de vue-componenten toe aan je body
-3. 
+3.
 
 
 
