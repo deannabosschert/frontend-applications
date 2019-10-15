@@ -11,7 +11,7 @@ Gebruik van packages; grote verzamelplaats voor packages en met npm kun je met z
 ### express
 Routing regelen, http helpers gebruiken (redirecting, caching)
 
-#### EJS/views
+#### EJS/'views'-map [je kan ook ez kiezen voor een andere tho]
 Templating engine voor NodeJS; handler. Maakt een HTML-template met minimale code en kan data client-side toevoegen aan de HTML. Zorgt ervoor dat JS omgezet wordt naar HTML.
 
 #### body-parser
