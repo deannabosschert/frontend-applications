@@ -24,3 +24,11 @@ Hierdoor kun je code opdelen in componenten/losse files waardoor de verschillend
 
 #### Nodemon
 Hiermee kun je je server automatisch laten reloaden wanneer je wijzigingen in je code aanbrengt.
+
+
+### Tl;dr
+NodeJS is je server
+npm is voor packages kunnen gebruiken
+Express is je routing
+EJS is je paginatemplate
+Vue is hoe je pagina's op de client worden geladen
