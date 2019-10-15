@@ -1,7 +1,7 @@
 # Breakdown
 ## Wat wordt waarvoor gebruikt?
 
-### NodeJS
+### Node.js
 Softwareplatform waarmee je een server kunt laten draaien.
 Hierdoor kun je JavaScript (wat oorspronkelijk voor de clientside was) aan de serverkant gebruiken.
 
