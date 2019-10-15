@@ -25,9 +25,11 @@ Gebruikt single file components om je app te bouwen waardoor bepaalde componente
 
 
 ### Where do we use it?
+In een NodeJS-omgeving.
 
 ### How do we use it?
 Dmv een .vue extension --> basically gebruik je vue om gewoon de losse componenten te kunnen importen.
+https://medium.com/js-dojo/getting-started-with-vuejs-for-web-and-native-285dc64f0f0d
 
 1. Link je vue-script vlak voor </body>.
 2. Voeg de vue-componenten toe aan je body
@@ -36,3 +38,4 @@ Dmv een .vue extension --> basically gebruik je vue om gewoon de losse component
 
 
 ### Mini example
+even testen met een nieuwe repo

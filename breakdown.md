@@ -28,7 +28,7 @@ Hiermee kun je je server automatisch laten reloaden wanneer je wijzigingen in je
 
 ### Tl;dr
 NodeJS is je server
-npm is voor packages kunnen gebruiken
-Express is je routing
-EJS is je paginatemplate
-Vue is hoe je pagina's op de client worden geladen
+npm is zodat je packages kunt gebruiken
+Express is je routingregelaar
+EJS is je paginatemplate waardoor je serversidedingen naar HTML wordt omgezet
+Vue is hoe je pagina's op de client worden geladen --> bepaalt de HTML-syntax
