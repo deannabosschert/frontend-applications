@@ -46,6 +46,6 @@ Meer kennis vergaren over de de geschiedenis achter de terminologie en zo een be
 * Bombay
 -etc
 
-#####  COUNT total hits van ['word' IN 'title']
+#####  COUNT total hits van ['word' IN 'title'] + ['word' IN description]
 ##### SORT BY ASC 'year'
 ##### iets met de tekstbordjes bij tentoongestelde werken, mits deze ook in de database staan (bijv, in welk jaar ze veranderd zijn, wat er veranderd is, over welke terminologie het gaat etc)
