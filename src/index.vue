@@ -4,15 +4,20 @@
       @teDoen-click="choice = 'teDoen'"
       @incl-alGehaald-click="choice = 'incl-alGehaald'"
     />
+    
+    <input type="text" v-model="title" />
+    <button @click="alertMessage">Alert</button>
 
     <div v-if="choice === 'teDoen'">
       <h3>Toggle1header</h3>
-      <testComponent/>
+      <testComponent
+      :title= "title"/>
     </div>
 
     <div v-if="choice === 'incl-alGehaald'">
       <h3>Toggle2header</h3>
-      <testComponent/>
+      <testComponent
+      :title= "title"/>
     </div>
   </div>
 </template>
@@ -26,9 +31,15 @@ export default {
   name: "app",
   data() {
     return {
-      choice: "teDoen"
+      choice: "teDoen",
+      title: 'Yeet!'
     }
   },
+  methods: {
+   alertMessage(){
+     alert(this.title)
+   }
+ },
   components: {
     switchBetween,
     testComponent
