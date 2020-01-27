@@ -4,19 +4,19 @@
       @teDoen-click="choice = 'teDoen'"
       @incl-alGehaald-click="choice = 'incl-alGehaald'"
     />
-    
+
     <input type="text" v-model="title" />
     <button @click="alertMessage">Alert</button>
 
     <div v-if="choice === 'teDoen'">
       <h3>Toggle1header</h3>
-      <testComponent
+      <test1
       :title= "title"/>
     </div>
 
     <div v-if="choice === 'incl-alGehaald'">
       <h3>Toggle2header</h3>
-      <testComponent
+      <test2
       :title= "title"/>
     </div>
   </div>
@@ -24,7 +24,8 @@
 
 <script>
 import switchBetween from "./components/switchBetween.vue"
-import testComponent from "./components/testComponent.vue"
+import test1 from "./components/test1.vue"
+import test2 from "./components/test2.vue"
 
 
 export default {
@@ -42,7 +43,8 @@ export default {
  },
   components: {
     switchBetween,
-    testComponent
+    test1,
+    test2
   }
 }
 </script>
