@@ -5,9 +5,6 @@ import App from './index.vue'
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 
-// 0. If using a module system (e.g. via vue-cli), import Vue and VueRouter
-// and then call `Vue.use(VueRouter)`.
-
 // 1. Define route components.
 // These can be imported from other files
 const test1 = { template: '<div>test1</div>' }

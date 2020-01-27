@@ -9,13 +9,13 @@
     <button @click="alertMessage">Alert</button>
 
     <div v-if="choice === 'teDoen'">
-      <h3>Toggle1header</h3>
+      <h3>Header1</h3>
       <test1
       :title= "title"/>
     </div>
 
     <div v-if="choice === 'incl-alGehaald'">
-      <h3>Toggle2header</h3>
+      <h3>Header2</h3>
       <test2
       :title= "title"/>
     </div>
