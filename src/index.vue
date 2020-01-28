@@ -5,33 +5,46 @@
       @incl-alGehaald-click="choice = 'incl-alGehaald'"
     />
 
+    <input type="text" v-model="title" />
+    <button @click="alertMessage">Alert</button>
+
     <div v-if="choice === 'teDoen'">
-      <h3>Toggle1header</h3>
-      <testComponent/>
+      <h3>Header1</h3>
+      <test1
+      :title= "title"/>
     </div>
 
     <div v-if="choice === 'incl-alGehaald'">
-      <h3>Toggle2header</h3>
-      <testComponent/>
+      <h3>Header2</h3>
+      <test2
+      :title= "title"/>
     </div>
   </div>
 </template>
 
 <script>
 import switchBetween from "./components/switchBetween.vue"
-import testComponent from "./components/testComponent.vue"
+import test1 from "./components/test1.vue"
+import test2 from "./components/test2.vue"
 
 
 export default {
   name: "app",
   data() {
     return {
-      choice: "teDoen"
+      choice: "teDoen",
+      title: 'Yeet!'
     }
   },
+  methods: {
+   alertMessage(){
+     alert(this.title)
+   }
+ },
   components: {
     switchBetween,
-    testComponent
+    test1,
+    test2
   }
 }
 </script>
