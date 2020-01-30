@@ -113,5 +113,7 @@ section {
   align-self: center;
   align-items: center;
   align-content: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 </style>
