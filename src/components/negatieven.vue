@@ -58,7 +58,8 @@ export default {
             ?cho edm:isShownBy ?img .
           	FILTER langMatches(lang(?title), "ned")
            }
-            LIMIT 30
+            ORDER BY ASC(?title)
+            LIMIT 40
             `;
     this.loadData(endpoint, query);
   },
