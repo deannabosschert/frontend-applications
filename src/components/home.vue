@@ -1,7 +1,7 @@
 <template>
   <main id="home">
     <h1>Fotografiecollectie NMVW- indonesia</h1>
-    <router-link to="www.google.com">Meer info</router-link>
+    <router-link to='/info'>Info</router-link>
     <!-- <router-view></router-view> -->
     <switchBetween
       @fotos-click="choice = 'fotos'"
