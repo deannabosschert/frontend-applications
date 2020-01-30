@@ -1,6 +1,9 @@
 <template>
     <div id="app">
-      <router-link to='/'>home</router-link>
+      <header>
+        <router-link class = "homeSymbol" to='/'>&#127968; home</router-link>
+        <router-link class = "infoSymbol" to='/info'>&#8505; info</router-link>
+    </header>
         <router-view />
     </div>
 </template>
@@ -15,8 +18,24 @@ export default {
 
 </script>
 
-<style>
-body{
+<style scoped>
+
+.homeSymbol, .infoSymbol{
+font-size: 2rem;
+font-variant: small-caps;
+font-weight: 600;
+color:#a31a1a;
+display: flex;
+}
+
+header {
+  position: absolute;
+  margin-left: 1rem;
+}
+
+
+
+/* body{
   background-color: #fbf3e4
 }
 
@@ -41,5 +60,5 @@ h2 {
   align-items: center;
   align-content: center;
 
-}
+} */
 </style>

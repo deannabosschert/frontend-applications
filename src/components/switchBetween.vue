@@ -71,8 +71,9 @@ export default {
   display: flex;
   padding: 2px;
   border-radius: 10px;
-  max-width: 50vw;
+  /* max-width: 50vw; */
   justify-content: center;
+  margin: 2rem;
   /* margin-left: 25vw;
   margin-right: 25vw; */
   /* background-color: blue; */
