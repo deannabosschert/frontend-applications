@@ -1,9 +1,8 @@
 <template>
   <main id="home">
     <h1>Fotografiecollectie NMVW- indonesia</h1>
-    <router-link to='/info'>Info</router-link>
     <!-- <router-view></router-view> -->
-    <switchBetween
+    <SwitchBetween
       @fotos-click="choice = 'fotos'"
       @negatieven-click="choice = 'negatieven'"
       @dias-click="choice = 'dias'"
@@ -19,19 +18,19 @@
     </div>
 
     <div v-if="choice === 'negatieven'">
-      <negatieven
+      <Negatieven
       category = 'negatieven'/>
     </div>
 
     <div v-if="choice === 'dias'">
-      <dias
+      <Dias
       category = "dia's"
       />
 
     </div>
 
     <div v-if="choice === 'lichtbeelden'">
-      <lichtbeelden
+      <Lichtbeelden
       category = 'lichtbeelden'
       />
     </div>
@@ -40,11 +39,11 @@
 </template>
 
 <script>
-// import switchBetween from "./components/switchBetween.vue"
-import Fotos from "./fotos.vue"
-// import negatieven from "./components/negatieven.vue"
-// import dias from "./components/dias.vue"
-// import lichtbeelden from "./components/lichtbeelden.vue"
+import SwitchBetween from "@/components/switchBetween.vue"
+import Fotos from "@/components/fotos.vue"
+import Negatieven from "@/components/negatieven.vue"
+import Dias from "@/components/dias.vue"
+import Lichtbeelden from "@/components/lichtbeelden.vue"
 
 
 export default {
@@ -58,11 +57,11 @@ export default {
 
  },
   components: {
-  //   switchBetween,
-    Fotos
-  //   negatieven,
-  //   lichtbeelden,
-  //   dias
+    SwitchBetween,
+    Fotos,
+    Negatieven,
+    Lichtbeelden,
+    Dias
   }
 }
 </script>
@@ -82,7 +81,7 @@ h2 {
 
 }
 
-#app {
+#home {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
