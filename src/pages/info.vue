@@ -1,6 +1,6 @@
 <template>
   <main id="info">
-    <h1>Info fotografie</h1>
+    <h1>Info fotografiesoorten</h1>
     <h2>foto's</h2>
     <p>
       Een foto is een afbeelding op een plat vlak vervaardigd door middel van
@@ -22,34 +22,35 @@
       digitale camera gemeengoed werd werden kleurenfoto's voor
       publicatiedoeleinden meestal als dia gemaakt.
     </p>
-    <p class = "source">Bron: Wikipedia</p>
+    <p class="source">Bron: Wikipedia</p>
   </main>
 </template>
 
 <script>
 export default {
   name: "info"
-}
+};
 </script>
 
 <style>
-
 #info p {
   max-width: 40vw;
+  color: #2c3e50;
+  margin-top: -1rem;
 }
 #info {
-font-family: "Avenir", Helvetica, Arial, sans-serif;
-text-align: center;
-color: #2c3e50;
-margin-top: 60px;
-display: flex;
-flex-direction: column;
-align-self: center;
-align-items: center;
-align-content: center;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  align-content: center;
 }
 
-.source{
+.source {
   font-style: italic;
 }
 </style>
