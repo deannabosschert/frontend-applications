@@ -9,12 +9,17 @@
     />
 
     <div v-if="choice === 'fotos'">
-      <Fotos category="foto's" />
+      <Fotos category="fotos" />
       />
     </div>
 
     <div v-if="choice === 'negatieven'">
-      <Negatieven category="negatieven" />
+      <Negatieven
+        title="negatieven"
+        category="negatieven"
+        query="{'Negatief'
+      'negatief' 'Glasnegatief' 'glasnegatief'}"
+      />
     </div>
 
     <div v-if="choice === 'dias'">

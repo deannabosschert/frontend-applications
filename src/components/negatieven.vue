@@ -1,6 +1,8 @@
 <template>
-  <div id="negatieven">
-    <h2>{{ category }}</h2>
+  <div :id="category">
+    <h2>{{ title }}</h2>
+    <h2>{{ query }}</h2>
+
     <div class="content">
       <a v-for="(result, index) in results" :key="index" :href="result.url">
         <section>
@@ -19,15 +21,24 @@
 
 <script>
 /*eslint 'no-console':0*/
+// import queries from "/queries.js";
 export default {
-  name: "negatieven",
+  name: "category",
   data() {
     return {
       results: []
     };
   },
   props: {
+    title: {
+      type: String,
+      required: true
+    },
     category: {
+      type: String,
+      required: true
+    },
+    query: {
       type: String,
       required: true
     }
