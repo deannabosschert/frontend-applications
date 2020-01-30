@@ -61,7 +61,7 @@ export default {
 }
 
 .switchBetween_radio:checked + .switchBetween_label {
-  background: #4b0082;
+  background: #174e49;
   color: white;
 }
 

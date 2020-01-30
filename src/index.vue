@@ -50,7 +50,10 @@ export default {
 </script>
 
 <style>
+body{
+  background-color: #fbf3e4
 
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   text-align: center;
@@ -61,5 +64,6 @@ export default {
   align-self: center;
   align-items: center;
   align-content: center;
+
 }
 </style>

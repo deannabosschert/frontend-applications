@@ -4,11 +4,15 @@
  <a v-for="(result, index) in results"
     :key="index"
     :href="result.url"
- >   <h3>{{ result.title.value }}</h3>
-   <p> {{ result.location.value }}</p> <br>
-   <p> {{ result.type.value }}</p> <br>
+ >
+  <section class = "ding">
 
-   <img class="images" v-bind:src="result.img.value" alt="">
+    <h3>{{ result.title.value }}</h3>
+   <p> &#x25bc; {{ result.location.value }}</p> <br>
+
+   <img class="images" v-bind:src="result.img.value" alt="result.title.value">
+ </section>
+
  </a>
 </div>
 </template>
@@ -37,8 +41,8 @@ export default {
 
      	VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"}
 
-        	?cho dct:spatial ?place
-             dc:type ?type
+        	?cho dct:spatial ?place ;
+             dc:type ?type ;
              dc:title ?title .
              ?cho edm:isShownBy ?img .
 
@@ -52,10 +56,10 @@ export default {
 		// SELECT ?cho ?id ?parentId
 		// WHERE {
 		//       # er wordt van boven naar beneden gewerkt in de hiërarchie
-		//       # geef de categorieën onder wapens en munitie dit zijn alle parentlabels
+		//       # geef de categorieën onder wapens en munitie; dit zijn alle parentlabels
 		//       <https://hdl.handle.net/20.500.11840/termmaster12435> skos:narrower* ?cat .
 		//       ?cat skos:prefLabel ?id .
-		//       # geef de term (de "broader term") die daarboven staat in de thesaurus dit is je 'hoofdterm' nu
+		//       # geef de term (de "broader term") die daarboven staat in de thesaurus; dit is je 'hoofdterm' nu
 		//       ?cat skos:broader ?catParent .
 		//       ?catParent skos:prefLabel ?parentId .
 		//     }
@@ -115,24 +119,70 @@ export default {
 </script>
 
 <style scoped>
-/* .container {
-  display: grid
-  grid-template-columns: 150px 150px 150px
-  grid-template-rows: 150px 150px
-  grid-gap: 1rem
-} */
+.container {
+  /* display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-template-rows: 30vw 30vw;
+  grid-gap: 5vw; */
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* position: relative; */
+}
+  h3 {
+    background-color: #a31a1a;
+    color: #ffffff;
+    /* padding: 0.2em 0.5em; */
+    /* margin: 0.5em; */
+    /* text-transform: lowercase; */
+    /* font-variant: small-caps; */
+    font-size: 1em;
+    font-weight: 450;
+    padding: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    letter-spacing: 0.1px;
+
+  }
+p {
+  color: #ffffff;
+}
+  .ding {
+    background-color: #b63232;
+    max-width: 20vw;
+    border-radius: 5px;
+    box-shadow: 10px 10px 3px -4px rgba(0,0,0,0.21);
+    padding: 0rem 1rem 1rem 1rem;
+    margin: 0.5rem;
+  }
+  /* .color-primary-0 { color: #983351 }
+  .color-primary-1 { color: #E498AF }
+  .color-primary-2 { color: #BE5F7C }
+  .color-primary-3 { color: #721330 }
+  .color-primary-4 { color: #4C0017 } */
+
+
+.images {
+  max-width: inherit;
+  max-height: inherit;
+  object-fit: cover;
+  background-color: grey;
+  margin-top: -5%;
+}
+
 /*
 .item {
-  max-width: 10vw
-  max-height: 8vh
-  display: flex
-  object-fit: cover
+  max-width: 10vw;
+  max-height: 8vh;
+  display: flex;
+  object-fit: cover;
 
 } */
 /*
 .images {
-  max-width: 10vw
-  max-height: 8vh
+  max-width: 10vw;
+  max-height: 8vh;
 } */
 
 
