@@ -1,38 +1,47 @@
 <template>
   <div id="app">
     <switchBetween
-      @teDoen-click="choice = 'teDoen'"
-      @incl-alGehaald-click="choice = 'incl-alGehaald'"
+      @fotos-click="choice = 'fotos'"
+      @negatieven-click="choice = 'negatieven'"
+      @dias-click="choice = 'dias'"
+      @lichtbeelden-click="choice = 'lichtbeelden'"
     />
 
     <input type="text" v-model="title" />
     <button @click="alertMessage">Alert</button>
 
-    <div v-if="choice === 'teDoen'">
-      <h3>Header1</h3>
-      <test1
-      :title= "title"/>
+    <div v-if="choice === 'fotos'">
+      <fotos/>
     </div>
 
-    <div v-if="choice === 'incl-alGehaald'">
-      <h3>Header2</h3>
-      <test2
-      :title= "title"/>
+    <div v-if="choice === 'negatieven'">
+      <negatieven/>
     </div>
-  </div>
+
+    <div v-if="choice === 'dias'">
+      <dias/>
+    </div>
+
+    <div v-if="choice === 'lichtbeelden'">
+      <lichtbeelden/>
+    </div>
+
+    </div>
 </template>
 
 <script>
 import switchBetween from "./components/switchBetween.vue"
-import test1 from "./components/test1.vue"
-import test2 from "./components/test2.vue"
+import fotos from "./components/fotos.vue"
+import negatieven from "./components/negatieven.vue"
+import dias from "./components/dias.vue"
+import lichtbeelden from "./components/lichtbeelden.vue"
 
 
 export default {
   name: "app",
   data() {
     return {
-      choice: "teDoen",
+      choice: "fotos",
       title: 'Yeet!'
     }
   },
@@ -43,8 +52,10 @@ export default {
  },
   components: {
     switchBetween,
-    test1,
-    test2
+    fotos,
+    negatieven,
+    lichtbeelden,
+    dias
   }
 }
 </script>

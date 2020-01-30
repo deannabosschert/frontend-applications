@@ -21,6 +21,7 @@
 <script>
 /*eslint 'no-console':0*/
 export default {
+  name: "dias",
 	data() {
 		return {
 			results: []
@@ -39,7 +40,7 @@ export default {
         	<https://hdl.handle.net/20.500.11840/termmaster7745> skos:narrower* ?place .
         	?place skos:prefLabel ?location .
 
-     	VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"}
+     	VALUES ?type {"Dia" "dia" "Kleurendia" "kleurendia"}
 
         	?cho dct:spatial ?place ;
              dc:type ?type ;

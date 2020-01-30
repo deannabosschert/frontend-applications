@@ -7,17 +7,21 @@ Vue.use(VueRouter)
 
 // 1. Define route components.
 // These can be imported from other files
-const test1 = { template: '<div>test1</div>' }
-const test2 = { template: '<div>test2</div>' }
-
+const fotos = { template: '<div>fotos</div>' }
+const negatieven = { template: '<div>negatieven</div>' }
+const dias = { template: '<div>dias</div>' }
+const lichtbeelden = { template: '<div>lichtbeelden</div>' }
 // 2. Define some routes
 // Each route should map to a component. The "component" can
 // either be an actual component constructor created via
 // `Vue.extend()`, or just a component options object.
 // We'll talk about nested routes later.
 const routes = [
-  { path: '/test1', component: test1 },
-  { path: '/test2', component: test2 }
+  { path: '/fotos', component: fotos },
+  { path: '/negatieven', component: negatieven },
+  { path: '/dias', component: dias },
+  { path: '/lichtbeelden', component: lichtbeelden }
+
 ]
 
 // 3. Create the router instance and pass the `routes` option
