@@ -35,12 +35,14 @@ export default {
 <style>
 #info p {
   max-width: 40vw;
+  color: #2c3e50;
+  margin-top: -1rem;
 }
 #info {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-self: center;

@@ -1,7 +1,6 @@
 <template>
   <div :id="category">
     <h2>{{ title }}</h2>
-    <h2>{{ category }}</h2>
     <div class="content">
       <a v-for="(result, index) in results" :key="index" :href="result.url">
         <section>
@@ -58,7 +57,7 @@ export default {
             dc:title ?title .
             ?cho edm:isShownBy ?img .
           	FILTER langMatches(lang(?title), "ned")
-          }
+           }
             LIMIT 30
             `;
     this.loadData(endpoint, query);
@@ -67,6 +66,7 @@ export default {
     loadData(endpoint, query) {
       const querySource_ID =
         endpoint + "?query=" + encodeURIComponent(query) + "&format=json";
+      // source: fetch in code of Laurens Aarnoudse
       fetch(querySource_ID)
         .then(res => res.json())
         .then(json => {

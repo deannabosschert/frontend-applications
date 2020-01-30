@@ -9,25 +9,20 @@
     />
 
     <div v-if="choice === 'fotos'">
-      <Fotos category="fotos" />
+      <Fotos title="foto's" category="fotos" />
       />
     </div>
 
     <div v-if="choice === 'negatieven'">
-      <Negatieven
-        title="negatieven"
-        category="negatieven"
-        query="{'Negatief'
-      'negatief' 'Glasnegatief' 'glasnegatief'}"
-      />
+      <Negatieven title="negatieven" category="negatieven" />
     </div>
 
     <div v-if="choice === 'dias'">
-      <Dias category="dia's" />
+      <Dias title="dia's" category="dias" />
     </div>
 
     <div v-if="choice === 'lichtbeelden'">
-      <Lichtbeelden category="lichtbeelden" />
+      <Lichtbeelden title="lichtbeelden" category="lichtbeelden" />
     </div>
   </main>
 </template>
