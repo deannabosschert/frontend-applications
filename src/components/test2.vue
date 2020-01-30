@@ -1,18 +1,25 @@
 
 <template>
 <div class="container">
-  <section class="item" v-for="result in results" v-bind:key="result.title.value">
-    <a href="">
-      <div>
-        <h3>{{ result.title.value }}</h3>
-        <p> {{ result.location.value }}</p> <br>
-        <!-- <p> {{ result.catLabel.value }}</p> <br> -->
 
-        <img class="images" v-bind:src="result.img.value" alt="">
-      </div>
-    </a>
-  </section>
+
+
+ <a v-for="(result, index) in results"
+    :key="index"
+    :href="result.url"
+ >   <h3>{{ result.title.value }}</h3>
+   <p> {{ result.location.value }}</p> <br>
+   <p> {{ result.type.value }}</p> <br>
+
+   <img class="images" v-bind:src="result.img.value" alt="">
+ </a>
 </div>
+  <!-- <section class="item" v-for="result in results" v-bind:key="result.img.value">
+      <div>
+
+      </div>
+  </section> -->
+<!-- </div> -->
 </template>
 
 
@@ -33,17 +40,21 @@ export default {
            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
            PREFIX edm: <http://www.europeana.eu/schemas/edm/>
            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-               SELECT ?title ?img ?type ?location
-                   WHERE {
-                     <https://hdl.handle.net/20.500.11840/termmaster12435> skos:narrower* ?typ .
-                     <https://hdl.handle.net/20.500.11840/termmaster12435> skos:narrower* ?cat .
-                     ?cho dct:spatial ?loc .
-                     ?loc skos:prefLabel ?location .
-                     ?cho edm:object ?typ .
-                     ?typ skos:prefLabel ?type .
-                     ?cho dc:title ?title .
-                     ?cho edm:isShownBy ?img .
-                   }
+           SELECT ?cho ?title ?location ?type ?img WHERE {
+        	<https://hdl.handle.net/20.500.11840/termmaster7745> skos:narrower* ?place .
+        	?place skos:prefLabel ?location .
+
+     	VALUES ?type { "Foto" "foto" "Negatief" "negatief" "Glasnegatief" "glasnegatief" "Dia" "dia" "Kleurendia" "kleurendia" "Lichtbeeld" "lichtbeeld"}
+
+        	?cho dct:spatial ?place ;
+             dc:type ?type ;
+             dc:title ?title .
+             ?cho edm:isShownBy ?img .
+
+        	FILTER langMatches(lang(?title), "ned")
+
+     }
+
 
                     LIMIT 1000
                `
@@ -74,13 +85,13 @@ export default {
         const results = prettifyArray(rawData)
         console.log(results)
 
-        let mySet = new Set()
-        mySet.add(results)
+        // let mySet = new Set()
+        // mySet.add(results)
 
-        let test5 = Array.from(mySet);
+        // let test5 = Array.from(mySet);
 // [ "foo", "bar", "baz" ]
-        console.log(mySet)
-        console.log(test5)
+        // console.log(mySet)
+        // console.log(test5)
 
 
         // const set = Array.from(new Set(results.map(JSON.stringify))).map(JSON.parse);
