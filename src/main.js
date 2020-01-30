@@ -1,36 +1,51 @@
-import Vue from 'vue/dist/vue.js'
+import Vue from 'vue'
+import App from './App.vue'
 import VueRouter from 'vue-router'
-import App from './index.vue'
 
-Vue.config.productionTip = false
-Vue.use(VueRouter)
+import Home from '@/pages/home'
+import Info from '@/pages/info'
+import Fotos from '@/components/fotos'
+import Negatieven from '@/components/negatieven'
+import Dias from '@/components/dias'
+import Lichtbeelden from '@/components/lichtbeelden'
 
-// 1. Define route components.
-// These can be imported from other files
-const test1 = { template: '<div>test1</div>' }
-const test2 = { template: '<div>test2</div>' }
-
-// 2. Define some routes
-// Each route should map to a component. The "component" can
-// either be an actual component constructor created via
-// `Vue.extend()`, or just a component options object.
-// We'll talk about nested routes later.
+Vue.use(VueRouter);
 const routes = [
-  { path: '/test1', component: test1 },
-  { path: '/test2', component: test2 }
+  {
+  path:'/',
+  component: Home,
+    children: [
+      {
+        path: '/negatieven',
+        component: Negatieven
+      },
+      {
+        path: '/fotos',
+        component: Fotos },
+      {
+        path: '/dias',
+        component: Dias
+      },
+      {
+        path: '/lichtbeelden',
+        component: Lichtbeelden
+      }
+    ]
+},{
+  path:'/info',
+  component: Info
+}
 ]
 
-// 3. Create the router instance and pass the `routes` option
-// You can pass in additional options here, but let's
-// keep it simple for now.
+
+
 const router = new VueRouter({
-  routes // short for `routes: routes`
+  routes
 })
 
-// 4. Create and mount the root instance.
-// Make sure to inject the router with the router option to make the
-// whole app router-aware.
+Vue.config.productionTip = false
+
 new Vue({
-  router,
   render: h => h(App),
+  router,
 }).$mount('#app')
