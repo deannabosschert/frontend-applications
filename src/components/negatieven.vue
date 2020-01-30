@@ -1,9 +1,9 @@
 <template>
   <div id="negatieven">
-    <h2> {{ category }}</h2>
-    <div class = "negatievenContent">
+    <h2>{{ category }}</h2>
+    <div class="content">
       <a v-for="(result, index) in results" :key="index" :href="result.url">
-        <section class="item">
+        <section>
           <h3>{{ result.title.value }}</h3>
           <p>&#x25bc; {{ result.location.value }}</p>
           <img
@@ -86,44 +86,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.negatievenContent {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-h2 {
-  display: flex;
-  justify-content: space-around;
-}
-
-h3 {
-  background-color: #a31a1a;
-  color: #ffffff;
-  font-size: 1em;
-  font-weight: 450;
-  padding: 1rem;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  letter-spacing: 0.1px;
-}
-p {
-  color: #ffffff;
-}
-section {
-  background-color: #b63232;
-  max-width: 20vw;
-  border-radius: 5px;
-  box-shadow: 10px 10px 3px -4px rgba(0, 0, 0, 0.21);
-  padding: 0rem 1rem 1rem 1rem;
-  margin: 0.5rem;
-}
-
-.images {
-  max-width: inherit;
-  max-height: inherit;
-  object-fit: cover;
-  margin-top: -1rem;
-}
-</style>
+<style></style>
