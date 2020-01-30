@@ -1,20 +1,19 @@
 <template>
-  <div class="container">
+  <div id="negatieven">
     <h2> {{ category }}</h2>
-
-    <a v-for="(result, index) in results" :key="index" :href="result.url">
-      <section class="item">
-        <h3>{{ result.title.value }}</h3>
-        <p>&#x25bc; {{ result.location.value }}</p>
-        <br />
-
-        <img
-          class="images"
-          v-bind:src="result.img.value"
-          alt="result.title.value"
-        />
-      </section>
-    </a>
+    <div class = "negatievenContent">
+      <a v-for="(result, index) in results" :key="index" :href="result.url">
+        <section class="item">
+          <h3>{{ result.title.value }}</h3>
+          <p>&#x25bc; {{ result.location.value }}</p>
+          <img
+            class="images"
+            v-bind:src="result.img.value"
+            alt="result.title.value"
+          />
+        </section>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -25,18 +24,17 @@ export default {
   data() {
     return {
       results: []
-    }
+    };
   },
   props: {
     category: {
-      type: Object,
+      type: String,
       required: true
     }
   },
-
   mounted() {
     const endpoint =
-      "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-19/sparql"
+      "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-19/sparql";
     const query = `
            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
            PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -56,22 +54,22 @@ export default {
             ?cho edm:isShownBy ?img .
           	FILTER langMatches(lang(?title), "ned")
           }
-            LIMIT 20
-            `
-    this.loadData(endpoint, query)
+            LIMIT 30
+            `;
+    this.loadData(endpoint, query);
   },
   methods: {
     loadData(endpoint, query) {
       const querySource_ID =
-        endpoint + "?query=" + encodeURIComponent(query) + "&format=json"
+        endpoint + "?query=" + encodeURIComponent(query) + "&format=json";
       fetch(querySource_ID)
         .then(res => res.json())
         .then(json => {
-          this.results = json.results.bindings
-          const rawData = this.results
-          const results = prettifyArray(rawData)
-          console.log(results)
-        })
+          this.results = json.results.bindings;
+          const rawData = this.results;
+          const results = prettifyArray(rawData);
+          console.log(results);
+        });
 
       function prettifyArray(array) {
         return array.map(results => {
@@ -80,20 +78,26 @@ export default {
             location: results.location.value,
             type: results.type.value,
             img: results.img.value
-          }
-        })
+          };
+        });
       }
     }
   }
-}
+};
 </script>
 
 <style scoped>
-.container {
+.negatievenContent {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+h2 {
+  display: flex;
+  justify-content: space-around;
+}
+
 h3 {
   background-color: #a31a1a;
   color: #ffffff;

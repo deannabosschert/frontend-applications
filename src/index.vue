@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <main id="app">
+    <h1>Fotografiecollectie NMVW- indonesia</h1>
+    <router-link to="www.google.com">Meer info</router-link>
+    <!-- <router-view></router-view> -->
     <switchBetween
       @fotos-click="choice = 'fotos'"
       @negatieven-click="choice = 'negatieven'"
@@ -7,26 +10,33 @@
       @lichtbeelden-click="choice = 'lichtbeelden'"
     />
 
-    <input type="text" v-model="title" />
-    <button @click="alertMessage">Alert</button>
+
 
     <div v-if="choice === 'fotos'">
-      <fotos/>
+      <fotos
+      category = "foto's"/>
+      />
     </div>
 
     <div v-if="choice === 'negatieven'">
-      <negatieven/>
+      <negatieven
+      category = 'negatieven'/>
     </div>
 
     <div v-if="choice === 'dias'">
-      <dias/>
+      <dias
+      category = "dia's"
+      />
+
     </div>
 
     <div v-if="choice === 'lichtbeelden'">
-      <lichtbeelden/>
+      <lichtbeelden
+      category = 'lichtbeelden'
+      />
     </div>
 
-    </div>
+  </main>
 </template>
 
 <script>
@@ -41,21 +51,18 @@ export default {
   name: "app",
   data() {
     return {
-      choice: "fotos",
-      title: 'Yeet!'
+      choice: "fotos"
     }
   },
   methods: {
-   alertMessage(){
-     alert(this.title)
-   }
+
  },
   components: {
     switchBetween,
     fotos,
     negatieven,
     lichtbeelden,
-    dias
+    dias,
   }
 }
 </script>
@@ -63,8 +70,18 @@ export default {
 <style>
 body{
   background-color: #fbf3e4
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-variant: small-caps;
 
 }
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   text-align: center;

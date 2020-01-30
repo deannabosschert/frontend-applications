@@ -2,25 +2,37 @@ import Vue from 'vue/dist/vue.js'
 import VueRouter from 'vue-router'
 import App from './index.vue'
 
+
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 // 1. Define route components.
 // These can be imported from other files
-const fotos = { template: '<div>fotos</div>' }
-const negatieven = { template: '<div>negatieven</div>' }
-const dias = { template: '<div>dias</div>' }
-const lichtbeelden = { template: '<div>lichtbeelden</div>' }
+// const Home = {template: '#home'}
+// const Fotos = { template: '#fotos' }
+// const Negatieven = { template: '#negatieven' }
+// const Dias = { template: '#dias' }
+// const Lichtbeelden = { template: '#lichtbeelden' }
+// const Info = { template: 'info' }
+
+
+const Info = {
+    template: '#info'
+};
+
 // 2. Define some routes
 // Each route should map to a component. The "component" can
 // either be an actual component constructor created via
 // `Vue.extend()`, or just a component options object.
 // We'll talk about nested routes later.
 const routes = [
-  { path: '/fotos', component: fotos },
-  { path: '/negatieven', component: negatieven },
-  { path: '/dias', component: dias },
-  { path: '/lichtbeelden', component: lichtbeelden }
+  // { path: '/components/fotos.vue', component: Fotos},
+  // { path: '/#/negatieven', component: Negatieven },
+  // { path: '/#/components/dias.vue', component: Dias },
+  // { path: '/#/components/lichtbeelden.vue', component: Lichtbeelden },
+  // { path: '/info', component: Info }
+  { path: '/info', component: Info }
+
 
 ]
 

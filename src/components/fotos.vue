@@ -1,6 +1,6 @@
 
 <template>
-<div class="container">
+<div class="fotos">
  <a v-for="(result, index) in results"
     :key="index"
     :href="result.url"
@@ -120,7 +120,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.fotos {
   /* display: grid;
   grid-template-columns: 30vw 30vw 30vw;
   grid-template-rows: 30vw 30vw;
