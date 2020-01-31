@@ -36,7 +36,7 @@ export default {
       required: true
     }
   },
-  mounted() {
+  created() {
     const endpoint =
       "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-19/sparql";
     const query = `
