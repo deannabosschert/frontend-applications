@@ -34,7 +34,7 @@ Normaal maak ik uiteraard eerst mijn schetsen maar in dit uitzonderlijke geval w
 ## Data loading + cleaning
 De data wordt ingeladen middels de loadData-function (credits: https://github.com/cmda-tt/course-19-20/tree/master/examples) waarin het vervolgens wordt omgezet naar json.
 
-`
+```js
 loadData(endpoint, query) {
       const querySource_ID =
         endpoint + "?query=" + encodeURIComponent(query) + "&format=json";
@@ -46,10 +46,10 @@ loadData(endpoint, query) {
           const rawData = this.results;
           const results = prettifyArray(rawData);
         });
-`
+```
 
 Hierna gooi ik de opgehaalde json-array door m'n prettifyArray heen om de data te cleanen (= alleen benodigde values extracten).
-`
+```js
       function prettifyArray(array) {
         return array.map(results => {
           return {
@@ -60,7 +60,7 @@ Hierna gooi ik de opgehaalde json-array door m'n prettifyArray heen om de data t
           };
         });
       }
-    `
+    ```
 
 ## TO DO
 - [ ] Queries in aparte file
