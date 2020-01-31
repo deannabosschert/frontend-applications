@@ -1,4 +1,4 @@
-# frontend-applications
+# Frontend-Applications
 
 ## Assignment
 
@@ -62,7 +62,7 @@ Hierna gooi ik de opgehaalde json-array door m'n prettifyArray heen om de data t
       }
     `
 
-### TO DO
+## TO DO
 - [ ] Queries in aparte file
 - [ ] Header in aparte file
 - [ ] Eén functional categorie-component waaraan 'category' als prop wordt meegegeven. (nu niet gelukt ivm mislukte koppeling 'queries.js')
