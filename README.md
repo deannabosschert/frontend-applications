@@ -4,7 +4,7 @@
 Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
 
 # Concept
-Deze website biedt overzicht voor wie zich graag bezighoudt met fotografie en geïnspireerd kan/wil worden door de toentertijdse fotografiestijl in Indonesië. Hierbij kan gefilterd worden op soort fotografie;
+[Deze website](https://frontend-applications-deannab…) biedt overzicht voor wie zich graag bezighoudt met fotografie en geïnspireerd kan/wil worden door de toentertijdse fotografiestijl in Indonesië. Hierbij kan gefilterd worden op soort fotografie;
 * Foto
 * Negatief
 * Dia
