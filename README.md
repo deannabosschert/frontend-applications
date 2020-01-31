@@ -1,19 +1,10 @@
 # Frontend-Applications
 
 ## Assignment
-
 Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
 
-## Installatie
-` npm install -g @vue/cli ` ==> install vue cli globally
-` npm install` ==> install my added packages
-
-### Compiles and hot-reloads for development
-` npm run dev ` ==> tijdens development de app compilen en reloaden
-
-### Compiles and minifies for production
-
-`npm run build` ==> gooit alles in /dist, geoptimaliseerd voor productie
+## Uitwerking
+![screenshot of website](https://github.com/deannabosschert/frontend-applications/blob/master/docs/images/screenshot_app.png)
 
 
 # Concept
@@ -28,9 +19,19 @@ Aangezien ik zelf ook affiniteit heb met analoge fotografie (okay, misschien een
 ## Schets
 Normaal maak ik uiteraard eerst mijn schetsen maar in dit uitzonderlijke geval wilde ik mij allereerst richten op het gebruik van het framework ipv concept.
 
-## Uitwerking
-![screenshot of website](https://github.com/deannabosschert/frontend-applications/blob/master/docs/images/screenshot_app.png)
+# Installatie
+` npm install -g @vue/cli ` ==> install vue cli globally
+` npm install` ==> install my added packages
 
+### Compiles and hot-reloads for development
+` npm run dev ` ==> tijdens development de app compilen en reloaden
+
+### Compiles and minifies for production
+
+`npm run build` ==> gooit alles in /dist, geoptimaliseerd voor productie
+
+
+# Data
 ## Data loading + cleaning
 De data wordt ingeladen middels de loadData-function (credits: https://github.com/cmda-tt/course-19-20/tree/master/examples) waarin het vervolgens wordt omgezet naar json.
 
@@ -46,9 +47,10 @@ loadData(endpoint, query) {
           const rawData = this.results;
           const results = prettifyArray(rawData);
         });
-```
+ ```
 
 Hierna gooi ik de opgehaalde json-array door m'n prettifyArray heen om de data te cleanen (= alleen benodigde values extracten).
+
 ```js
       function prettifyArray(array) {
         return array.map(results => {
@@ -60,7 +62,7 @@ Hierna gooi ik de opgehaalde json-array door m'n prettifyArray heen om de data t
           };
         });
       }
-    ```
+```
 
 ## TO DO
 - [ ] Queries in aparte file
