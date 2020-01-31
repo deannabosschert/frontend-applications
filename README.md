@@ -73,6 +73,6 @@ Hierna gooi ik de opgehaalde json-array door m'n prettifyArray heen om de data t
 Zie mijn [Wiki](https://github.com/deannabosschert/frontend-applications/wiki) voor documentatie.
 
 ## Bronnen
-Installatie vue: https://medium.com/js-dojo/getting-started-with-vuejs-for-web-and-native-285dc64f0f0d 
-Vue-routing: via https://router.vuejs.org/guide/ 
-Losse eindjes: https://github.com/cmda-tt/course-19-20/tree/master/examples 
+* Installatie vue: https://medium.com/js-dojo/getting-started-with-vuejs-for-web-and-native-285dc64f0f0d 
+* Vue-routing: via https://router.vuejs.org/guide/ 
+* Losse eindjes: https://github.com/cmda-tt/course-19-20/tree/master/examples 
