@@ -18,7 +18,7 @@
 </template>
 
 <script>
-/*eslint 'no-console':0*/
+/*eslint-disable */
 export default {
   name: "category",
   data() {
@@ -26,17 +26,7 @@ export default {
       results: []
     };
   },
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
-    category: {
-      type: String,
-      required: true
-    }
-  },
-  mounted() {
+  created() {
     const endpoint =
       "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-19/sparql";
     const query = `
@@ -49,20 +39,31 @@ export default {
 
            SELECT ?cho ?title ?location ?type ?img
            WHERE {
-          	<https://hdl.handle.net/20.500.11840/termmaster7745> skos:narrower* ?place .
-          	?place skos:prefLabel ?location .
-       	    VALUES ?type {"Negatief" "negatief" "Glasnegatief" "glasnegatief"}
-          	?cho dct:spatial ?place ;
+            <https://hdl.handle.net/20.500.11840/termmaster7745> skos:narrower* ?place .
+            ?place skos:prefLabel ?location .
+            VALUES ?type {"Negatief" "negatief" "Glasnegatief" "glasnegatief"}
+            ?cho dct:spatial ?place ;
             dc:type ?type ;
             dc:title ?title .
             ?cho edm:isShownBy ?img .
-          	FILTER langMatches(lang(?title), "ned")
+            FILTER langMatches(lang(?title), "ned")
            }
             ORDER BY ASC(?title)
             LIMIT 40
             `;
     this.loadData(endpoint, query);
   },
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    category: {
+      type: String,
+      required: true
+    }
+  },
+  mounted() {},
   methods: {
     loadData(endpoint, query) {
       const querySource_ID =
@@ -74,7 +75,6 @@ export default {
           this.results = json.results.bindings;
           const rawData = this.results;
           const results = prettifyArray(rawData);
-          console.log(results);
         });
 
       function prettifyArray(array) {
