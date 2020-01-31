@@ -3,16 +3,14 @@
 ## Assignment
 Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
 
-## Uitwerking
-![screenshot of website](https://github.com/deannabosschert/frontend-applications/blob/master/docs/images/screenshot_app.png)
-
-
 # Concept
 Deze website biedt overzicht voor wie zich graag bezighoudt met fotografie en geïnspireerd kan/wil worden door de toentertijdse fotografiestijl in Indonesië. Hierbij kan gefilterd worden op soort fotografie;
 * Foto
 * Negatief
 * Dia
 * Lichtbeeld
+
+![screenshot of website](https://github.com/deannabosschert/frontend-applications/blob/master/docs/images/screenshot_app.png)
 
 Aangezien ik zelf ook affiniteit heb met analoge fotografie (okay, misschien een redelijke collectie aan camera's, film en afdrukken inmiddels..) leek dit mij wel een tof iets om het leren van mijn framework mee te doen.
 
